@@ -47,5 +47,5 @@ Ensure the database is running and accessible.
 Check that the JDBC driver is properly linked in the project libraries.
 Verify that the database credentials are correct.
 
-
+### Altenatively you can also execute the jar file of the project provided in the zipped folder.
 ### For access to the codes of pharmacy vist-https://github.com/ashr77/Pharmacy-Management-System.git
