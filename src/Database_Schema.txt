@@ -1,0 +1,67 @@
+﻿MySQL Database Schema
+
+
+* Patient Records Table:
+
+
+1. Create a new database named “project” and connect with the project using ConnectionProviderPatient.java.
+2. Create tables - patient and patientreport using the following commands in the mysql commandline -
+
+
+ CREATE TABLE patient (
+  patientID varchar(10) NOT NULL,
+  name varchar(50) DEFAULT NULL,
+  age varchar(3) DEFAULT NULL,
+  gender varchar(10) DEFAULT NULL,
+  bloodGroup varchar(10) DEFAULT NULL,
+  address varchar(100) DEFAULT NULL,
+  contactNumber varchar(15) DEFAULT NULL,
+  email varchar(20) DEFAULT NULL,
+  anyMajorDisease varchar(100) DEFAULT NULL,
+  PRIMARY KEY (patientID)
+) 
+
+
+CREATE TABLE patientreport (
+  patientID varchar(10) NOT NULL,
+  symptom varchar(200) DEFAULT NULL,
+  diagnosis varchar(200) DEFAULT NULL,
+  medicines varchar(200) DEFAULT NULL,
+  wardReq varchar(5) DEFAULT NULL,
+  typeWard varchar(10) DEFAULT NULL,
+  PRIMARY KEY (patientID)
+)
+
+
+
+
+* Bloodbank Record Table:
+
+
+
+1. Create a new database named “bbms” and connect with the project using ConnectionProvider.java.
+2. Create tables - donor and stock using the following commands in the mysql commandline -
+
+
+ CREATE TABLE donor (
+  donorId int(10) NOT NULL,
+  name varchar(100) DEFAULT NULL,
+  fatherName varchar(100) DEFAULT NULL,
+  motherName varchar(100) DEFAULT NULL,
+  DOB varchar(20) DEFAULT NULL,
+  MobileNO varchar(15) DEFAULT NULL,
+  gender varchar(10) DEFAULT NULL,
+  email varchar(100) DEFAULT NULL,
+  bloodGroup varchar(10) DEFAULT NULL,
+  city varchar(100) DEFAULT NULL,
+  address varchar(500) DEFAULT NULL,
+  PRIMARY KEY (donorId)
+)
+
+
+
+
+CREATE TABLE stock (
+  bloodGroup varchar(20) DEFAULT NULL,
+  units int(10) DEFAULT NULL
+)
