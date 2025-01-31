@@ -65,3 +65,43 @@ CREATE TABLE stock (
   bloodGroup varchar(20) DEFAULT NULL,
   units int(10) DEFAULT NULL
 )
+
+* Pharmacy record tables
+
+
+1. Create a new database named “pharmacy” and connect with the project using ConnectionProviderPharmacy.java.
+2. Create tables - appuser, medicine and bill using the following commands in the mysql commandline -
+
+CREATE TABLE appuser (
+  appuser_pk INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(200) DEFAULT NULL,
+  userRole VARCHAR(200) DEFAULT NULL,
+  dob VARCHAR(50) DEFAULT NULL,
+  mobileNumber VARCHAR(50) DEFAULT NULL,
+  email VARCHAR(200) DEFAULT NULL,
+  username VARCHAR(200) DEFAULT NULL,
+  password VARCHAR(50) DEFAULT NULL,
+  address VARCHAR(200) DEFAULT NULL,
+  PRIMARY KEY (appuser_pk)
+);
+
+
+CREATE TABLE medicine (
+  medicine_pk INT NOT NULL AUTO_INCREMENT,
+  uniqueId VARCHAR(200) DEFAULT NULL,
+  name VARCHAR(200) DEFAULT NULL,
+  companyName VARCHAR(200) DEFAULT NULL,
+  quantity BIGINT DEFAULT NULL,
+  price BIGINT DEFAULT NULL,
+  PRIMARY KEY (medicine_pk)
+);
+
+
+CREATE TABLE bill (
+  bill_pk INT NOT NULL AUTO_INCREMENT,
+  billId VARCHAR(200) DEFAULT NULL,
+  billDate VARCHAR(50) DEFAULT NULL,
+  totalPaid BIGINT DEFAULT NULL,
+  generatedBy VARCHAR(50) DEFAULT NULL,
+  PRIMARY KEY (bill_pk)
+);
